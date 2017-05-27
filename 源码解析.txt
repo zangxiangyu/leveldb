@@ -19,6 +19,9 @@
 4.读port包中的程序：
   4.1."port/port.h"             : 平台相关的总封装入口;
   4.2."port/atomic_pointer.h"   : 平台无关的AtomicPointer实现;
+
+
+5.TODO,读一下如何通过jndi?来实现与Java的结合的?
   
   
   

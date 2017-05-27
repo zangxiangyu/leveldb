@@ -1,0 +1,24 @@
+1.先读Makefile文件，理解make指令、g++指令;
+
+2.读util包中的程序：
+  2.1."util/testharness.h" : 所有的测试都是通过此驱动的,学习宏的使用，宏的展开方式(经典模式);可以make check 运行所有的测试;可以在输出的 out-static/*_test运行查看测试过程!
+  2.2."util/random.h"      : 随机数生成
+  2.3."util/arena.h"       : 小内存对象的管理，内存池；http://blog.csdn.net/tankles/article/details/7663471 ;内存对齐实现;
+  2.4."util/hash.h"        : 实现一个hash函数.
+  2.5."util/logging.h"     : 实现一些字符串转换相关的功能
+  2.6."util/posix_logger.h": Logger的posix实现.
+  2.7."util/coding.h"      : 编解码(int32/int64 <-> char*)，可变的int实现.
+  2.8."util/bloom.cc"      : bloom-filter接口实现.
+
+3.读include/leveldb包中的程序：
+  3.1. "leveldb/slice.h"          : 将(data,data_size)封装成Slice对象,方便使用.
+  3.2. "leveldb/status.h"         : 将[0..3=message_size,4=状态码( kOk = 0,kNotFound = 1,kCorruption = 2,kNotSupported = 3,kInvalidArgument = 4,kIOError = 5),5+..=messages] 封装成Status对象;
+  3.3. "leveldb/filter_policy.h"  : bloom-filter类似接口.
+  
+  
+4.读port包中的程序：
+  4.1."port/port.h"             : 平台相关的总封装入口;
+  4.2."port/atomic_pointer.h"   : 平台无关的AtomicPointer实现;
+  
+  
+  
